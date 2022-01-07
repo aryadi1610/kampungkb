@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap/css/bkkbn_css.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/sweetalert2.css">
+    <script src="https://kit.fontawesome.com/073910e859.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/translucent.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css">
+    <title>Simulasi Klasifikasi Kampung KB</title>
+</head>
+
+<body onload="tutorial()">
+    <header>
+        <div class="jumbotron">
+            <h1>Simulasi Klasifikasi Kampung KB</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="#content">
+            <form method="post">
+                <div class="databox">
+                    <div class="card">
+                        <div class="tutor-box">
+                            <div class="tutor-container">
+                                <input class="button" id="tutor-box" type="button" value="Petunjuk Aplikasi">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box input">
+                            <div class="input headerbox">Variabel Input</div>
+                            <div class="input-content radio-box">
+                                <p>Keberadaan Pokja (kepemilikan pokja, SK Pokja, Pokja terlatih, sosialisasi pokja)</p>
+                                <input type="radio" name="input-soal1" id="input-radio1" value="1">
+                                <label for="input-radio1" id="label-input1">Kurang</label>
+                                <input type="radio" name="input-soal1" id="input-radio2" value="2">
+                                <label for="input-radio2" id="label-input2">Cukup</label>
+                                <input type="radio" name="input-soal1" id="input-radio3" value="3">
+                                <label for="input-radio3" id="label-input3">Baik</label>
+                                <input type="radio" name="input-soal1" id="input-radio4" value="4">
+                                <label for="input-radio4" id="label-input4">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Sumber dana (APBN, APBD, Dana Desa, CSR, swadaya masy, Hibah, Lainnya)</p>
+                                <input type="radio" name="input-soal2" id="input-radio5" value="1">
+                                <label for="input-radio5" id="label-input5">Kurang</label>
+                                <input type="radio" name="input-soal2" id="input-radio6" value="2">
+                                <label for="input-radio6" id="label-input6">Cukup</label>
+                                <input type="radio" name="input-soal2" id="input-radio7" value="3">
+                                <label for="input-radio7" id="label-input7">Baik</label>
+                                <input type="radio" name="input-soal2" id="input-radio8" value="4">
+                                <label for="input-radio8" id="label-input8">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Kepemilikan poktan (BKB, BKR, BKL, UPPKS, dan PIKR)</p>
+                                <input type="radio" name="input-soal3" id="input-radio9" value="1">
+                                <label for="input-radio9" id="label-input9">Kurang</label>
+                                <input type="radio" name="input-soal3" id="input-radio10" value="2">
+                                <label for="input-radio10" id="label-input10">Cukup</label>
+                                <input type="radio" name="input-soal3" id="input-radio11" value="3">
+                                <label for="input-radio11" id="label-input11">Baik</label>
+                                <input type="radio" name="input-soal3" id="input-radio12" value="4">
+                                <label for="input-radio12" id="label-input12">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Ada sarana tempat sekteraiatan dan sarana rumah data</p>
+                                <input type="radio" name="input-soal4" id="input-radio13" value="1">
+                                <label for="input-radio13" id="label-input13">Kurang</label>
+                                <input type="radio" name="input-soal4" id="input-radio14" value="2">
+                                <label for="input-radio14" id="label-input14">Cukup</label>
+                                <input type="radio" name="input-soal4" id="input-radio15" value="3">
+                                <label for="input-radio15" id="label-input15">Baik</label>
+                                <br>
+                                <br>
+                                <p>Keberadaan PKB/PLKB dan Regulasi</p>
+                                <input type="radio" name="input-soal5" id="input-radio16" value="1">
+                                <label for="input-radio16" id="label-input16">Kurang</label>
+                                <input type="radio" name="input-soal5" id="input-radio17" value="2">
+                                <label for="input-radio17" id="label-input17">Cukup</label>
+                                <input type="radio" name="input-soal5" id="input-radio18" value="3">
+                                <label for="input-radio18" id="label-input18">Baik</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box proses">
+                            <div class="proses headerbox">Variabel Proses</div>
+                            <div class="proses-content radio-box">
+                                <p>Penggunaan data untuk perencaan antara lain Data PK, Data Rutin, Data podes, Data Sektoral, Sumber Data lainnya</p>
+                                <input type="radio" name="proses-soal1" id="proses-radio1" value="1">
+                                <label for="proses-radio1" id="label-proses1">Kurang</label>
+                                <input type="radio" name="proses-soal1" id="proses-radio2" value="2">
+                                <label for="proses-radio2" id="label-proses2">Cukup</label>
+                                <input type="radio" name="proses-soal1" id="proses-radio3" value="3">
+                                <label for="proses-radio3" id="label-proses3">Baik</label>
+                                <input type="radio" name="proses-soal1" id="proses-radio4" value="4">
+                                <label for="proses-radio4" id="label-proses4">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Mekanisme operasional antara lain : rapat perencaan kegiatan koordinasi dengan lintas sektoral melakukan sosialisasi kegiatan, melakukan monev, membuat laporan.</p>
+                                <input type="radio" name="proses-soal2" id="proses-radio5" value="1">
+                                <label for="proses-radio5" id="label-proses5">Kurang</label>
+                                <input type="radio" name="proses-soal2" id="proses-radio6" value="2">
+                                <label for="proses-radio6" id="label-proses6">Cukup</label>
+                                <input type="radio" name="proses-soal2" id="proses-radio7" value="3">
+                                <label for="proses-radio7" id="label-proses7">Baik</label>
+                                <input type="radio" name="proses-soal2" id="proses-radio8" value="4">
+                                <label for="proses-radio8" id="label-proses8">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Intervansi lintas sektoral : Keterlibatan sektor lain dalam pelaksaan kegiatan</p>
+                                <input type="radio" name="proses-soal3" id="proses-radio9" value="1">
+                                <label for="proses-radio9" id="label-proses9">Kurang</label>
+                                <input type="radio" name="proses-soal3" id="proses-radio10" value="2">
+                                <label for="proses-radio10" id="label-proses10">Cukup</label>
+                                <input type="radio" name="proses-soal3" id="proses-radio11" value="3">
+                                <label for="proses-radio11" id="label-proses11">Baik</label>
+                                <input type="radio" name="proses-soal3" id="proses-radio12" value="4">
+                                <label for="proses-radio12" id="label-proses12">Baik Sekali</label>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box output">
+                            <div class="output headerbox">Variabel Output</div>
+                            <div class="output-content radio-box">
+                                <p>Partisipasi keluarga / remaja dalam kegiatan Poktan BKB, BKR, BKL, PIK-R dan UPPKS
+                                </p>
+                                <input type="radio" name="output-soal1" id="output-radio1" value="1">
+                                <label for="output-radio1"  id="label-output1">Kurang</label>
+                                <input type="radio" name="output-soal1" id="output-radio2" value="2">
+                                <label for="output-radio2"  id="label-output2">Cukup</label>
+                                <input type="radio" name="output-soal1" id="output-radio3" value="3">
+                                <label for="output-radio3"  id="label-output3">Baik</label>
+                                <input type="radio" name="output-soal1" id="output-radio4" value="4">
+                                <label for="output-radio4"  id="label-output4">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Capaian CPR kontrasepsi modern</p>
+                                <input type="radio" name="output-soal2" id="output-radio5" value="1">
+                                <label for="output-radio5"  id="label-output5">Kurang</label>
+                                <input type="radio" name="output-soal2" id="output-radio6" value="2">
+                                <label for="output-radio6"  id="label-output6">Cukup</label>
+                                <input type="radio" name="output-soal2" id="output-radio7" value="3">
+                                <label for="output-radio7"  id="label-output7">Baik</label>
+                                <input type="radio" name="output-soal2" id="output-radio8" value="4">
+                                <label for="output-radio8"  id="label-output8">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Capaian MKJP kontrasepsi Mix</p>
+                                <input type="radio" name="output-soal3" id="output-radio9" value="1">
+                                <label for="output-radio9"  id="label-output9">Kurang</label>
+                                <input type="radio" name="output-soal3" id="output-radio10" value="2">
+                                <label for="output-radio10" id="label-output10">Cukup</label>
+                                <input type="radio" name="output-soal3" id="output-radio11" value="3">
+                                <label for="output-radio11" id="label-output11">Baik</label>
+                                <input type="radio" name="output-soal3" id="output-radio12" value="4">
+                                <label for="output-radio12" id="label-output12">Baik Sekali</label>
+                                <br>
+                                <br>
+                                <p>Persentase PUS tidak berKB / unmet need</p>
+                                <input type="radio" name="output-soal4" id="output-radio13" value="1">
+                                <label for="output-radio13" id="label-output13">Kurang</label>
+                                <input type="radio" name="output-soal4" id="output-radio14" value="2">
+                                <label for="output-radio14" id="label-output14">Cukup</label>
+                                <input type="radio" name="output-soal4" id="output-radio15" value="3">
+                                <label for="output-radio15" id="label-output15">Baik</label>
+                                <input type="radio" name="output-soal4" id="output-radio16" value="4">
+                                <label for="output-radio16" id="label-output16">Baik Sekali</label>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="allButton">
+                            <input class="button" id="hapus-btn" type="reset" value="HAPUS">
+                            <input class="button" id="submit-btn" type="button" value="SUBMIT">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>BKKBN</p>
+        <p id="tanggal"></p>
+    
+    </footer>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+</script>
+<script src="assets/js/tippys.js"></script>
+</body>
+<script src="assets/js/sweetalert2.js"></script>
+<script type="text/javascript" src="assets/js/bkkbn_js.js"></script>
+<script>
+    const tanggal = new Date().getFullYear();
+    document.getElementById("tanggal").innerHTML = "&copy;" + " " + tanggal;
+</script>
+</html> 
